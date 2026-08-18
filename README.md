@@ -1,60 +1,85 @@
-# Potato-Leaf-Disease-Detection
-"Potato Disease Classification is a deep learning project using Convolutional Neural Networks (CNNs) to classify potato leaf images as healthy or diseased (Early Blight, Late Blight). It enables early detection of crop diseases, supporting farmers and smart agriculture solutions.”
-
 # Potato Disease Classification
 
-**Deep learning project for classifying potato leaf diseases using custom CNNs and pretrained VGG16 & VGG19 models.**  
+A deep learning project for classifying potato leaf images into **Healthy, Early Blight, and Late Blight** using Convolutional Neural Networks and transfer learning.
 
-This project automates the detection of potato leaf diseases from images, classifying leaves as **Healthy**, **Early Blight**, or **Late Blight**. Early detection helps farmers prevent crop loss and supports smart agriculture solutions.
+## Project Overview
 
----
+Potato diseases can significantly affect crop production. This project uses deep learning-based image classification to identify common potato leaf diseases from images and support early disease detection.
 
-## 🎯 Project Objective
+## Project Objective
 
-- Build and train **custom CNN models** for image classification  
-- Use **VGG16 & VGG19 pretrained models** for transfer learning  
-- Compare performance of custom vs pretrained models  
-- Provide an AI solution for early potato disease detection  
+- Classify potato leaf images into three categories:
+  - Healthy
+  - Early Blight
+  - Late Blight
+- Build and train a custom CNN model for image classification.
+- Apply transfer learning using pretrained VGG16 and MobileNetV2 models.
+- Compare model performance on the test dataset.
+- Develop a model that can predict the disease category from a new leaf image.
 
----
+## Dataset
 
-## 🗂 Dataset
+The project uses a potato leaf image dataset containing three classes:
 
-- Labeled images of potato leaves:  
-  - Healthy  
-  - Early Blight  
-  - Late Blight  
-- Images were preprocessed: resized, normalized, and augmented for training  
-- **Sample data included in `data/` folder**, full dataset download link provided in README
+- **Healthy**
+- **Early Blight**
+- **Late Blight**
 
----
+The images were resized and normalized before training. Data augmentation techniques were also applied to improve model generalization.
 
-## 🧠 Models Used
+> The complete dataset is not included in this repository because of its size.
 
-1. **Custom CNN** – designed from scratch to classify leaf images  
-2. **VGG16 & VGG19** – pretrained models used with transfer learning to improve accuracy  
+## Models Used
 
-Training involved fine-tuning the top layers while leveraging pretrained features from ImageNet.
+### 1. Custom CNN
 
----
+A Convolutional Neural Network was developed to learn visual features directly from potato leaf images.
 
-## 🛠 Tools & Technologies
+### 2. VGG16
 
-- Python  
-- TensorFlow / Keras  
-- NumPy, Pandas  
-- OpenCV  
-- Matplotlib / Seaborn  
+A pretrained VGG16 model was used with transfer learning to leverage features learned from ImageNet.
 
----
+### 3. MobileNetV2
 
-## 📊 Results
+MobileNetV2 was used as another transfer-learning approach, providing a lightweight architecture suitable for image classification.
 
-- Custom CNN achieved high accuracy on test data  
-- VGG16 & VGG19 improved performance and reduced training time  
-- Confusion matrices, accuracy/loss curves, and sample predictions included in notebooks  
+## Model Comparison
 
----
+| Model | Test Accuracy |
+|-------|---------------|
+| Custom CNN | 89.43% |
+| VGG16 | 87.13% |
+| MobileNetV2 | 94.94% |
 
-## 📁 Project Structure
+Based on the recorded test results, **MobileNetV2 achieved the highest test accuracy** among the evaluated models.
 
+## Technologies Used
+
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Pandas
+- OpenCV
+- Matplotlib
+- Seaborn
+- Google Colab
+
+## Project Workflow
+
+```text
+Potato Leaf Images
+        ↓
+Data Preprocessing
+        ↓
+Image Resizing & Normalization
+        ↓
+Data Augmentation
+        ↓
+Model Training
+        ↓
+Custom CNN / VGG16 / MobileNetV2
+        ↓
+Model Evaluation
+        ↓
+Disease Prediction

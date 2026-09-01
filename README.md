@@ -8,7 +8,7 @@ Potato diseases can significantly affect crop production. This project uses deep
 
 ## Project Objective
 
-- Classify potato leaf images into three categories:
+- classify potato leaf images into three categories:
   - Healthy
   - Early Blight
   - Late Blight

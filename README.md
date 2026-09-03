@@ -31,7 +31,7 @@ The images were resized and normalized before training. Data augmentation techni
 
 ## Models Used
 
-### 1. Custom CNN
+### 1. Custom CNNs
 
 A Convolutional Neural Network was developed to learn visual features directly from potato leaf images.
 
